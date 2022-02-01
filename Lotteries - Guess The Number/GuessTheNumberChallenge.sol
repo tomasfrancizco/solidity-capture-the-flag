@@ -33,6 +33,7 @@ contract GuessTheNumberSolver {
         owner = msg.sender;
     }
 
+    // the answer is 42: variable answer in the challenge contract
     function attack(uint8 _answer) public payable {
         challenge.guess.value(1 ether)(_answer);
     }
